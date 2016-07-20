@@ -11,7 +11,8 @@ public:
 
   int id;
 
-  static vector<WtmVirtualNetwork*>* createNetworks(vector<WtmSourceData*>* sourceData);
+  static vector<WtmVirtualNetwork*>* createNetworks(
+    vector<WtmSourceData*>* motorBasisSourceData, vector<WtmSourceData*>* notMotorBasisSourceData);
 
   WtmSourceData* sourceDataUnit;
 
