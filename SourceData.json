@@ -1,0 +1,109 @@
+{
+    "parameters": {
+        "networkPeriod": 3,
+        "layersNumber": 3,
+        "activationThreshold": 100,
+        "fatigueThreshold": 80,
+        "inputNeuronsNumber": 14,
+        "outputNeuronNumber": 3,
+        "uniqueNeuronsPerVNet": 3,
+        "averageSynapseWeight": 20,
+        "initialSynapseWeight": 20,
+        "signalsPerAction": 2,
+
+        "sigmas": [
+            {
+                "title": "thresholdIncreaseFunc",
+                "initialYScale": 5,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            },
+            {
+                "title": "thresholdDecreaseFunc",
+                "initialYScale": 5,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            },
+            {
+                "title": "fatigueIncreaseFunc",
+                "initialYScale": 5,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            },
+            {
+                "title": "fatigueDecreaseFunc",
+                "initialYScale": 5,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            },
+            {
+                "title": "weightIncreaseFunc",
+                "initialYScale": 10,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            },
+            {
+                "title": "weightDecreaseFunc",
+                "initialYScale": 5,
+                "initialXOffset": 4,
+                "initialExpCoeff": 6,
+                "endYScale": 10,
+                "endXOffset": 5,
+                "endExpCoeff": 8,
+                "isIncreasing": 1
+            }
+        ]
+    },
+    "motorBasis": [
+        {
+            "title": "TurnLeft",
+            "inputData": [ 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0 ]
+        },
+        {
+            "title": "GoForward",
+            "inputData": [ 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+    ],
+    "basicBehavior": [
+        {
+            "title": "someSequence",
+            "inputData": [
+                [ 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0 ],       
+                [ 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 ]
+            ]
+        }
+    ],
+    "smtn": {
+        "outputData": [ 0, 1, 0 ],
+        "": [
+            [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0 ],
+            [ 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 ],
+            [ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]
+        ]
+    }
+
+}
+
+
+
