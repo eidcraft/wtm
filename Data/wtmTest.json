@@ -1,0 +1,178 @@
+{
+    "networkPeriod": 4,
+    "layersNumber": 15,
+    "activationThreshold": 100,
+    "fatigueThreshold": 80,
+    "inputNeuronsNumber": 3,
+    "outputNeuronNumber": 3,
+
+    "sigmas": [
+        {
+            "title": "thresholdIncreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        },
+        {
+            "title": "thresholdDecreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        },
+        {
+            "title": "fatigueIncreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        },
+        {
+            "title": "fatigueDecreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        },
+        {
+            "title": "weightIncreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        },
+        {
+            "title": "weightDecreaseFunc",
+            "initialYScale": 5,
+            "initialXOffset": 4,
+            "initialExpCoeff": 6,
+            "endYScale": 10,
+            "endXOffset": 5,
+            "endExpCoeff": 8,
+            "isIncreasing": 1
+        }
+    ],
+    "inputSignals" : [
+        {
+            "id": 0,
+            "outcomingSynapses": [
+                { "destNeuronId": 3, "distanceToDest": 1 },
+                { "destNeuronId": 4, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 1,
+            "outcomingSynapses": [
+                { "destNeuronId": 3, "distanceToDest": 1 },
+                { "destNeuronId": 5, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 2,
+            "outcomingSynapses": [
+                { "destNeuronId": 4, "distanceToDest": 1 },
+                { "destNeuronId": 5, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 3,
+            "outcomingSynapses": [
+                { "destNeuronId": 6, "distanceToDest": 1 },
+                { "destNeuronId": 7, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 4,
+            "outcomingSynapses": [
+                { "destNeuronId": 6, "distanceToDest": 1 },
+                { "destNeuronId": 8, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 5,
+            "outcomingSynapses": [
+                { "destNeuronId": 7, "distanceToDest": 1 },
+                { "destNeuronId": 8, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 6,
+            "outcomingSynapses": [
+                { "destNeuronId": 9, "distanceToDest": 1 },
+                { "destNeuronId": 10, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 7,
+            "outcomingSynapses": [
+                { "destNeuronId": 9, "distanceToDest": 1 },
+                { "destNeuronId": 11, "distanceToDest": 1 }
+            ]
+        }
+    ],
+    "neurons": [
+        {
+            "id": 8,
+            "networkLayer": 2,
+            "straightSynapses": [
+                { "sourceNeuronId": 4, "weight": 1 },
+                { "sourceNeuronId": 5, "weight": 1 }
+            ],
+            "outcomingSynapses": [
+                { "destNeuronId": 10, "distanceToDest": 1 },
+                { "destNeuronId": 11, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 9,
+            "networkLayer": 3,
+            "straightSynapses": [
+                { "sourceNeuronId": 6, "weight": 1 },
+                { "sourceNeuronId": 7, "weight": 1 }
+            ],
+            "outcomingSynapses": [
+                { "destNeuronId": 10, "distanceToDest": 1 },
+                { "destNeuronId": 11, "distanceToDest": 1 }
+            ]
+        },
+        {
+            "id": 10,
+            "networkLayer": 3,
+            "straightSynapses": [
+                { "sourceNeuronId": 6, "weight": 1 },
+                { "sourceNeuronId": 8, "weight": 1 }
+            ],
+            "outcomingSynapses": [
+
+            ]
+        },
+        {
+            "id": 11,
+            "networkLayer": 3,
+            "straightSynapses": [
+                { "sourceNeuronId": 7, "weight": 1 },
+                { "sourceNeuronId": 8, "weight": 1 }
+            ],
+            "outcomingSynapses": [
+
+            ]
+        }
+    ]
+}
+
